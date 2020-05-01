@@ -127,7 +127,7 @@
 // Display Accounts
 void display(const std::vector<Account *> &accounts) {
     std::cout << "\n=== Displaying Accounts =======================" << std::endl;
-    for (auto &acc: accounts) {
+    for (auto acc: accounts) {
         std::cout << *acc << std::endl;
     }
 }
@@ -135,7 +135,7 @@ void display(const std::vector<Account *> &accounts) {
 // Deposit to Accounts
 void deposit(std::vector<Account *> &accounts, double amount) {
     std::cout << "\n=== Depositing to Accounts =======================" << std::endl;
-    for (auto &acc: accounts) {
+    for (auto acc: accounts) {
         if (acc->deposit(amount))
             std::cout << "Deposited " << amount << " to " << *acc << std::endl;
         else
@@ -146,7 +146,7 @@ void deposit(std::vector<Account *> &accounts, double amount) {
 // withdraw to Accounts
 void withdraw(std::vector<Account *> &accounts, double amount) {
     std::cout << "\n=== Withdrawing from Accounts =======================" << std::endl;
-    for (auto &acc: accounts) {
+    for (auto acc: accounts) {
         if (acc->withdraw(amount))
             std::cout << "Withdrew " << amount << " from " << *acc << std::endl;
         else
